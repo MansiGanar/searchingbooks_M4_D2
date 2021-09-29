@@ -7,16 +7,25 @@ class Books extends Component {
     this.state = {
       books: [],
       searchField: "",
+      sort: "",
     };
   }
+
   handleSearch = (e) => {
     console.log(e.target.value);
     this.setState({ searchField: e.target.value });
   };
+  handleSort = (e) => {
+    this.setState({ sort: e.target.value });
+  };
+
   render() {
     return (
       <div>
-        <Search handleSearch={this.handleSearch} />
+        <Search
+          handleSearch={this.handleSearch}
+          onChange={(e) => this.handleSearch(e)}
+        />
       </div>
     );
   }
