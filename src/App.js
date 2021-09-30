@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import Books from "./components/Books";
 import SeeBooks from "./components/SeeBooks";
-
 import "./App.css";
+import SeeComments from "./components/SeeComments";
 
 class App extends Component {
   render() {
@@ -12,6 +12,7 @@ class App extends Component {
         <Header />
         <Books />
         <SeeBooks />
+        <SeeComments />
       </div>
     );
   }
