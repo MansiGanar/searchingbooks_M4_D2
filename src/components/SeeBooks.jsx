@@ -20,7 +20,7 @@ class SeeBooks extends Component {
                 <Card.Title>{bk.title}</Card.Title>
                 <Card.Text>Price: {bk.price}$</Card.Text>
                 <Card.Text>ID: {bk.asin}</Card.Text>
-                <Button variant="primary">Comments</Button>
+                <Button variant="primary">Comments </Button>
               </Card.Body>
             ))}
           </Card>

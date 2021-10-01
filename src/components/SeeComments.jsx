@@ -9,7 +9,7 @@ class SeeComments extends Component {
   fetchSeeComments = async () => {
     try {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/comments/",
+        `https://striveschool-api.herokuapp.com/api/comments/`,
         {
           headers: {
             Authorization:
@@ -44,7 +44,9 @@ class SeeComments extends Component {
             <ListGroup.Item>No Comments Saved!</ListGroup.Item>
           ) : (
             this.state.comments.map((c) => (
-              <ListGroup.Item key={c._id}>{c.title} </ListGroup.Item>
+              <ListGroup.Item key={c._id}>
+                {c.title} {c.comment}
+              </ListGroup.Item>
             ))
           )}
         </ListGroup>
